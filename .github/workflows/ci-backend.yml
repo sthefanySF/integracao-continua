@@ -7,6 +7,10 @@ on:
   pull_request:
     paths:
       - 'sgcmapi/**'
+
+permissions:
+  contents: write
+
 jobs:
   compile:
     runs-on: ubuntu-latest
