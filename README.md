@@ -31,7 +31,7 @@ Ou
 cd sgcmapi
 mvn spring-boot:run
 ```
-A aplicação vai iniciar no endereço <http://localhost:9000>, com acesso local a base de dados MySQL, por meio da porta padrão 3306, além de usuário e senha "root".
+A aplicação vai iniciar no endereço <https://localhost:9000>, com acesso local a base de dados MySQL, por meio da porta padrão 3306, além de usuário e senha "root".
 
 ## Front-end
 Para iniciar a aplicação, é necessário também instalar as dependências do projeto.
