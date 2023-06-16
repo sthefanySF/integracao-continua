@@ -16,7 +16,6 @@ on:
 
 jobs:
   compile:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -42,6 +41,7 @@ jobs:
         working-directory: sgcmapi/
         run: mvn test
   merge:
+    permissions: write-all
     needs: test
     runs-on: ubuntu-latest
     steps:
