@@ -8,14 +8,15 @@ on:
     paths:
       - 'sgcmapi/**'
 
-permissions:
-  contents: write
-  pull-requests: write
-  issues: write
-  packages: write
+# permissions:
+#   contents: write
+#   pull-requests: write
+#   issues: write
+#   packages: write
 
 jobs:
   compile:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
