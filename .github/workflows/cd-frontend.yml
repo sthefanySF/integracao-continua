@@ -12,11 +12,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 18
       - name: Install Railway CLI
         run: npm install -g @railway/cli@latest
       - name: Deploy to Railway
         working-directory: sgcmapp/
         run: railway up --detach --service sgcmapp
         env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_FRONT }}
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
