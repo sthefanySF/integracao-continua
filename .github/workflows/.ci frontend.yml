@@ -1,0 +1,36 @@
+name: CI Front-end
+
+on:
+  push:
+    branches:
+      - '**'
+      - '!main'
+  pull_request:
+    paths:
+      - 'sgcmapp/**'
+
+permissions:
+   contents: write
+   pull-requests: write
+   issues: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js and Angular CLI
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+      - name: Install Dependencies
+        working-directory: sgcmapp/
+        run: npm install
+      - name: Run Tests
+        working-directory: sgcmapp/
+        run: ng test --no-watch --no-progress --browsers=ChromeHeadless
+      - name: Build
+        working-directory: sgcmapp/
+        run: ng build
