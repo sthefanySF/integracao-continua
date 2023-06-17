@@ -1,3 +1,3 @@
 export const environment = {
-    API_URL: 'https://localhost:9000'
+    API_URL: 'https://lamentable-coil-production.up.railway.app'
 };
